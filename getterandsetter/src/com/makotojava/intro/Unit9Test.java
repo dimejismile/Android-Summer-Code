@@ -7,7 +7,7 @@ import java.util.logging.Logger;
 import org.junit.Test;
 
 public class Unit9Test {
-	//Unit 9 Question 13 Not Finished Yet!
+	//Unit 9 Question 13
 	@Test
 	public void testUnit9() {
 		Unit9 p = new Unit9 ("Joe Q Author", 42, 173, 82, "Brown", "MALE");
@@ -31,6 +31,7 @@ public class Unit9Test {
 		l.info("Gender:" + p.getGender());
 	}
 	}
+	
 	/*Unit 9 Question 11
 	@Test
 	public void testUnit9() {
@@ -50,6 +51,7 @@ public class Unit9Test {
 	}
 	
 	*/
+	
 	/*Unit 9 Question 11 
 	@Test
 	public void testUnit9() {
