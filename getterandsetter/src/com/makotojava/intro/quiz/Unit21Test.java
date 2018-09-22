@@ -25,6 +25,13 @@ class Unit21Test {
 	    
 	   classUnderTest.readFileFormatWithMaxCharactersPerLine(INPUT_FILE_NAME, 80);
 	}
+	//Unit 21 Question 7 Junit
+	@Test
+	public void testReadFileFormatWithMaxCharactersPerLinePreserveWords() {
+	   Unit21 classUnderTest = new Unit21();
+	    
+	   classUnderTest.readFileFormatWithMaxCharacterPerLinePerserveWords(INPUT_FILE_NAME, 80);
+	}
 	/*//Unit 21 Question 5
 	//writeFile Method
 	@Test
