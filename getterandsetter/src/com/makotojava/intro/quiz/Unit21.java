@@ -39,9 +39,38 @@ public class Unit21 {
 		   log.info("File contents:\n" + ret);
 		    
 		   return ret;
-
 }
-	//Unit 21 Question 5
+	//Unit 21 Question 6
+	public String readFileFormatWithMaxCharactersPerLine(String fileName, int maxCharactersPerLine) {
+		   String ret;
+		   StringBuilder sb = new StringBuilder();
+		    
+		   File file = new File(fileName);
+		   int lineNumber = 0;
+		   // try with-resources will close resources when done
+		   try (BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file)))) {
+		      String line = reader.readLine();
+		      while (line != null) {
+		         line = formatLine(line, maxCharactersPerLine);
+		         sb.append(line);
+		         sb.append('\n');
+		         // Read the next line
+		         line = reader.readLine();
+		      }
+		   } catch (IOException e) {
+		      log.severe("IOException occurred: " + e.getLocalizedMessage());
+		   }
+		    
+		   ret = sb.toString();
+		   log.info("File contents:\n" + ret);
+		    
+		   return ret;
+
+	//formatLine Method
+	
+	
+	
+	/*//Unit 21 Question 5
 	//Lets write a file
 	
 	public void writeFile(String fileName, String fileContents) {
@@ -52,6 +81,10 @@ public class Unit21 {
 		      writer.write(fileContents);
 		   } catch (IOException e) {
 		      log.severe("IOException occurred: " + e.getLocalizedMessage());
-		   }
+		   }*/
 }
+	private String formatLine(String line, int maxCharactersPerLine) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

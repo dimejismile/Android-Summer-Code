@@ -18,8 +18,14 @@ class Unit21Test {
 		classUnderTest.readFile(INPUT_FILE_NAME);
 		
 	}
-
-	//Unit 21 Question 5
+	//Unit 21 Question 6
+	@Test
+	public void testReadFileFormatWithMaxCharactersPerLine() {
+	   Unit21 classUnderTest = new Unit21();
+	    
+	   classUnderTest.readFileFormatWithMaxCharactersPerLine(INPUT_FILE_NAME, 80);
+	}
+	/*//Unit 21 Question 5
 	//writeFile Method
 	@Test
 	public void testWriteFile() {
@@ -29,5 +35,5 @@ class Unit21Test {
 	    
 	   String fileContents = classUnderTest.readFile(INPUT_FILE_NAME);
 	   classUnderTest.writeFile(fileName, fileContents);
-	}
+	}*/
 }
