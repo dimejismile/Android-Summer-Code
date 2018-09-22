@@ -1,10 +1,13 @@
 package com.makotojava.intro.quiz;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.logging.Logger;
 
 public class Unit21 {
@@ -37,5 +40,18 @@ public class Unit21 {
 		    
 		   return ret;
 
+}
+	//Unit 21 Question 5
+	//Lets write a file
+	
+	public void writeFile(String fileName, String fileContents) {
+	    
+		   File file = new File(fileName);
+		    
+		   try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)))) {
+		      writer.write(fileContents);
+		   } catch (IOException e) {
+		      log.severe("IOException occurred: " + e.getLocalizedMessage());
+		   }
 }
 }
